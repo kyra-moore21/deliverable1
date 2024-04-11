@@ -23,7 +23,7 @@ public class Program
             Console.WriteLine("The value is too high. Stock not adjusted.");
         }
 
-        Console.WriteLine($"How many Chips have been sold today? {sodaStock} are in stock.");
+        Console.WriteLine($"How many Chips have been sold today? {chipStock} are in stock.");
 
         int chipSold = int.Parse(Console.ReadLine());
         
