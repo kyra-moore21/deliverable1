@@ -5,44 +5,46 @@ public class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the restocking tool.");
-
-        Console.WriteLine("How many sodas have been sold today? 100 are in stock.");
+        int sodaStock = 100;
+        int chipStock = 40;
+        int candyStock = 60;
+        Console.WriteLine($"How many sodas have been sold today? {sodaStock} are in stock.");
         int sodaSold = int.Parse(Console.ReadLine());
 
-        int sodaStock = 100;
-        if (sodaSold <= 100)
+        
+        if (sodaSold <= sodaStock)
         {
             sodaStock = sodaStock - sodaSold;
 
-            Console.WriteLine("There are " + sodaStock + " sodas left.");
+            Console.WriteLine($"There are  {sodaStock}  sodas left.");
         }
         else
         {
             Console.WriteLine("The value is too high. Stock not adjusted.");
         }
 
-        Console.WriteLine("How many Chips have been sold today? 40 are in stock.");
+        Console.WriteLine($"How many Chips have been sold today? {sodaStock} are in stock.");
 
         int chipSold = int.Parse(Console.ReadLine());
-        int chipStock = 40;
-        if (chipSold <= 40)
+        
+        if (chipSold <= chipStock)
         {
             chipStock = chipStock - chipSold;
-            Console.WriteLine("There are " + chipStock + " chips left.");
+            Console.WriteLine($"There are  {chipStock}  chips left.");
         }
         else
         {
             Console.WriteLine("The value is too high. Stock not adjusted.");
         }
 
-        Console.WriteLine("How many Candy have been sold today? 60 are in stock.");
+        Console.WriteLine($"How many Candy have been sold today? {candyStock} are in stock.");
 
         int candySold = int.Parse(Console.ReadLine());
-        int candyStock = 60;
-        if (candySold <= 60)
+        
+        if (candySold <= candyStock)
         {
             candyStock = candyStock - candySold;
-            Console.WriteLine("There are " + candyStock + " candies left.");
+            Console.WriteLine($"There are  {candyStock}  candies left.");
         } 
         else
         {
@@ -52,7 +54,6 @@ public class Program
         int sodaRestock = 40;
         int chipRestock = 20;
         int candyRestock = 40;
-       
         
         if (sodaStock <= sodaRestock) {
             Console.WriteLine("Soda needs to be restocked");
